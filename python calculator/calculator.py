@@ -54,4 +54,6 @@ def calculadora():
         print(f"Resultado: {result}")
         time.sleep(2)
 
-calculadora()
+if __name__ == '__main__':
+    calculadora()
+
