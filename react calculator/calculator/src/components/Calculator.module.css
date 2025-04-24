@@ -1,0 +1,169 @@
+
+.calculator {
+    width: 100%;
+    max-width: 480px; 
+    margin: 2rem auto;
+    padding: 2rem; 
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  .calculator:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+  }
+
+  .header {
+    margin-bottom: 2rem; 
+    padding: 1.5rem; 
+    background-color: rgba(240, 240, 240, 0.5);
+    border-radius: 16px;
+    text-align: right;
+    overflow: hidden;
+  }
+  
+  .expression {
+    font-size: 1.1rem; 
+    color: #666;
+    min-height: 1.5rem; 
+    margin-bottom: 0.75rem; 
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .expression:hover {
+    opacity: 1;
+  }
+  
+  .display {
+    font-size: 3rem; 
+    font-weight: 700;
+    color: #333;
+    overflow-x: auto;
+    white-space: nowrap;
+    transition: all 0.2s;
+    padding: 0.5rem 0; 
+  }
+  
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem; 
+  }
+  
+
+  .button {
+    padding: 1.5rem 0; 
+    font-size: 1.75rem; 
+    font-weight: 600;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button:active {
+    transform: scale(0.95);
+  }
+  
+
+  .numberButton {
+    background-color: #f8f9fa;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .numberButton:hover {
+    background-color: #f1f3f5;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .operatorButton {
+    background: linear-gradient(145deg, #ff9500, #ff7800);
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 149, 0, 0.3);
+  }
+  
+  .operatorButton:hover {
+    background: linear-gradient(145deg, #ff7800, #ff9500);
+    box-shadow: 0 6px 12px rgba(255, 149, 0, 0.4);
+  }
+  
+  .functionButton {
+    background-color: #e9ecef;
+    color: #495057;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .functionButton:hover {
+    background-color: #dee2e6;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+
+  .spanTwo {
+    grid-column: span 2;
+  }
+  
+
+  @media (max-width: 520px) {
+    .calculator {
+      max-width: 360px;
+      padding: 1.5rem;
+      margin: 1.5rem auto;
+    }
+  
+    .button {
+      padding: 1.25rem 0;
+      font-size: 1.4rem;
+    }
+  
+    .display {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .calculator {
+      padding: 1rem;
+      margin: 1rem auto;
+    }
+  
+    .button {
+      padding: 1rem 0;
+      font-size: 1.2rem;
+      border-radius: 12px;
+    }
+  
+    .display {
+      font-size: 2rem;
+    }
+  }
+  
+
+  @keyframes buttonPress {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .button:active {
+    animation: buttonPress 0.2s ease;
+  }
+  
