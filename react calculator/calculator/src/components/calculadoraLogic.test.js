@@ -1,4 +1,4 @@
-import { createCalculatorLogic } from './calculadoraLogic';
+const { createCalculatorLogic } = require('./calculatorLogic');
 
 describe('Calculadora', () => {
   let calculadora;
